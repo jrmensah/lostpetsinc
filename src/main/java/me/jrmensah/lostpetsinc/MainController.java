@@ -25,7 +25,7 @@ public class MainController {
     }
 
     @GetMapping("/add")
-    public String loadForm(Model model){
+    public String petForm(Model model){
         model.addAttribute("pet", new Pet());
         return "lostpetform";
     }
@@ -47,7 +47,7 @@ public class MainController {
     }
     @RequestMapping("/update/{id}")
     public String updatePet(@PathVariable("id") long id, Model model){
-        model.addAttribute("person", petRepository.findOne(id));
+        model.addAttribute("pet", petRepository.findOne(id));
         return "lostpetform";
     }
     @RequestMapping("/delete/{id}")
@@ -55,5 +55,6 @@ public class MainController {
         petRepository.delete(id);
         return "redirect:/";
     }
+
 }
 
