@@ -18,24 +18,24 @@
     <ul class="nav navbar-nav navbar-left">
         <li><a href="homepage.html">Home</a></li>
         <li><a href="lostpetform.html">Add a Missing Pet</a> </li>
-        <li><a>Show All Missing Pets</a></li>
+        <li><a href="show.html">Show All Missing Pets</a></li>
         <li><a href="updatepet.html">Update Status</a></li>
-        <li><a href="/delete/{id}">Delete Pet</a></li>
+        <li><a>Delete Pet</a></li>
     </ul>
 </div>
 
-            <a href="/">Show all Pets</a><br/>
-                Pet Name:<span th:text="${pet.name}"></span><br/>
-                Age:<span th:text="${pet.age}"></span><br/>
-                Type of Animal:<span th:text="${pet.type}"></span><br/>
-                Breed:<span th:text="${pet.breed}"></span><br/>
-                Colour:<span th:text="${pet.colour}"></span><br/>
-                Distinguishing Features:<span th:text="${pet.features}"></span><br/>
-                Owner's Phone Number:<span th:text="${pet.phoneNum}"></span><br/>
-                Current Status:<span th:text="${pet.status}"></span><br/>
+<a href="/">Show all Pets</a><br/>
+Pet Name:<span th:text="${pet.name}"></span><br/>
+Age:<span th:text="${pet.age}"></span><br/>
+Type of Animal:<span th:text="${pet.type}"></span><br/>
+Breed:<span th:text="${pet.breed}"></span><br/>
+Colour:<span th:text="${pet.colour}"></span><br/>
+Distinguishing Features:<span th:text="${pet.features}"></span><br/>
+Owner's Phone Number:<span th:text="${pet.phoneNum}"></span><br/>
+Current Status:<span th:text="${pet.status}"></span><br/>
 
-            <a th:href="@{/delete/{id}(id=${pet.id})}"> Delete this pet</a>
-            <a th:href="@{/update/{id}(id=${pet.id})}"> Update pet status</a>
+<a th:href="@{/delete/{id}(id=${pet.id})}"> Delete this pet</a>
+
 
 
 

@@ -19,19 +19,19 @@ public class MainController {
     PetRepository petRepository;
 
     @RequestMapping("/")
-    public String listPets(Model model){
+    public String listNames(Model model){
         model.addAttribute("pet", petRepository.findAll());
-        return "index";
+        return "lostpetlist";
     }
 
     @GetMapping("/add")
-    public String loadPetForm(Model model){
+    public String loadForm(Model model){
         model.addAttribute("pet", new Pet());
         return "lostpetform";
     }
 
     @PostMapping("/process")
-    public String processPetForm(@Valid Pet pet, BindingResult result)
+    public String processForm(@Valid Pet pet, BindingResult result)
     {
         if(result.hasErrors()){
             return "lostpetform";

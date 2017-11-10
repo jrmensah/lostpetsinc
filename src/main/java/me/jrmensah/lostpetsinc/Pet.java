@@ -43,60 +43,78 @@ public class Pet {
     @Size(min=3, max=10, message= "Please enter phone number")
     private String phoneNum;
 
+    @NotNull
+    @Size(min=4, message = "Please indicate whether pet is lost or found")
+    private String status;
 
-    public long getId() {
+
+    public long getId()
+    {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(long id)
+    {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
-    public String getAge() {
+    public String getAge()
+    {
         return age;
     }
 
     public void setAge(String age) {
+
         this.age = age;
     }
 
-    public String getType() {
+    public String getType()
+    {
         return type;
     }
 
     public void setType(String type) {
+
         this.type = type;
     }
 
-    public String getBreed() {
+    public String getBreed()
+    {
         return breed;
     }
 
     public void setBreed(String breed) {
+
         this.breed = breed;
     }
 
-    public String getColour() {
+    public String getColour()
+    {
         return colour;
     }
 
-    public void setColour(String colour) {
+    public void setColour(String colour)
+    {
         this.colour = colour;
     }
 
-    public String getFeatures() {
+    public String getFeatures()
+    {
         return features;
     }
 
-    public void setFeatures(String features) {
+    public void setFeatures(String features)
+    {
         this.features = features;
     }
 
@@ -105,6 +123,15 @@ public class Pet {
     }
 
     public void setPhoneNum(String phoneNum) {
+
         this.phoneNum = phoneNum;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
