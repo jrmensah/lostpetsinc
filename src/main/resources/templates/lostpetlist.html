@@ -8,41 +8,59 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
 </head>
 <body>
 <div class="container">
     <ul class="nav navbar-nav navbar-left">
-        <li><a href="/add">Add a Person</a> </li>
-        <li><a>Show All Persons</a></li>
-        <li><a href="/detail/{id}">Delete Person</a></li>
+        <li><a href="/add">Add a Missing pet</a> </li>
+        <li><a>Show All Missing Pets</a></li>
+        <li><a href="/detail/{id}">Delete Pet</a></li>
     </ul>
 </div>
 
 <table>
     <tr>
-        <th>Name</th>
+        <th>Pet Name</th>
         <br/>
-        <th>Email Address</th>
+        <th>Age</th>
         <br/>
-        <th>Phone Number</th>
+        <th>Type of Animal</th>
+        <br/>
+        <th>Breed</th>
+        <br/>
+        <th>Color</th>
+        <br/>
+        <th>Distinguishing Features</th>
+        <br/>
+        <th>Owner's Phone Number</th>
 
     </tr>
-    <tr th:each="person : ${person}">
-        <td th:text="${person.name}"></td>
+    <tr th:each="pet : ${pet}">
+        <td th:text="${pet.name}"></td>
         <br/>
-        <td th:text="${person.email}"></td>
+        <td th:text="${pet.age}"></td>
         <br/>
-        <td th:text="${person.phoneNum}"></td>
+        <td th:text="${pet.type}"></td>
+        <br/>
+        <td th:text="${pet.breed}"></td>
+        <br/>
+        <td th:text="${pet.color}"></td>
+        <br/>
+        <td th:text="${pet.features}"></td>
+        <br/>
+        <td th:text="${pet.phoneNum}"></td>
         <br/>
         <td>Actions
-            <a th:href="@{/update/{id} (id=${person.id})}">Update</a>-
-            <a th:href="@{/detail/{id} (id=${person.id})}">Details</a>-
-            <a th:href="@{/delete/{id} (id=${person.id})}">Delete</a>
+            <a th:href="@{/update/{id} (id=${pet.id})}">Update</a>-
+            <a th:href="@{/detail/{id} (id=${pet.id})}">Details</a>-
+            <a th:href="@{/delete/{id} (id=${pet.id})}">Delete</a>
         </td>
     </tr>
 </table>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
 </body>
 </html>
