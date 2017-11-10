@@ -15,15 +15,23 @@
 <body>
 <div class="container">
     <ul class="nav navbar-nav navbar-left">
-        <li><a href="lostpetform.html">Add a Person</a> </li>
-        <li><a href="show.html">Show All Persons</a></li>
-        <li><a href="show.html">Delete Person</a></li>
+        <li><a href="lostpetform.html">Add a Missing Pet</a> </li>
+        <li><a href="show.html">Show All Missing Pets</a></li>
+        <li><a href="show.html">Delete Pet</a></li>
     </ul>
 </div>
-    <a href="/">Show all Persons</a><br/>
-    Name:<span th:text="${person.name}"></span><br/>
-    Email Address:<span th:text="${person.email}"></span><br/>
-    Phone Number:<span th:text="${person.phoneNum}"></span><br/>
-    <a th:href="@{/delete/{id}(id=${person.id})}"> Delete this person</a>
+        <div class="container">
+            <a href="/">Show all Pets</a><br/>
+                Pet Name:<span th:text="${pet.name}"></span><br/>
+                Age:<span th:text="${pet.age}"></span><br/>
+                Type of Animal:<span th:text="${pet.type}"></span><br/>
+                Breed:<span th:text="${pet.breed}"></span><br/>
+                Colour:<span th:text="${pet.colour}"></span><br/>
+                Distinguishing Features:<span th:text="${pet.features}"></span><br/>
+                Owner's Phone Number:<span th:text="${pet.phoneNum}"></span><br/>
+
+            <a th:href="@{/delete/{id}(id=${pet.id})}"> Delete this pet</a>
+            <a th:href="@{/update/{id}(id=${pet.id})}"> Update pet status</a>
+        </div>
 </body>
 </html>
