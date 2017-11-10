@@ -19,7 +19,7 @@ public class MainController {
     PetRepository petRepository;
 
     @RequestMapping("/")
-    public String listNames(Model model){
+    public String listPets(Model model){
         model.addAttribute("pet", petRepository.findAll());
         return "lostpetlist";
     }
