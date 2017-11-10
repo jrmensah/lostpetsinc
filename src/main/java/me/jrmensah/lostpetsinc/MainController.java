@@ -21,7 +21,7 @@ public class MainController {
     @RequestMapping("/")
     public String listPets(Model model){
         model.addAttribute("pet", petRepository.findAll());
-        return "lostpetlist";
+        return "index";
     }
 
     @GetMapping("/add")
